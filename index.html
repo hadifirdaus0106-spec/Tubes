@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Restoran</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Font Awesome untuk ikon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-brand">
+          <h1>🍽️ Resto Menu</h1>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <h2>Selamat Datang di Resto Kami</h2>
+        <p>Nikmati berbagai hidangan lezat dengan cita rasa terbaik</p>
+        <button class="btn btn-primary" onclick="scrollToMenu()">
+          Lihat Menu
+        </button>
+      </div>
+    </section>
+
+    <!-- Filter Menu -->
+    <section class="menu-filters">
+      <div class="container">
+        <h2>Kategori Menu</h2>
+        <div class="filter-buttons">
+          <button class="filter-btn active" onclick="filterMenu('all')">
+            Semua
+          </button>
+          <button class="filter-btn" onclick="filterMenu('makanan')">
+            Makanan
+          </button>
+          <button class="filter-btn" onclick="filterMenu('minuman')">
+            Minuman
+          </button>
+          <button class="filter-btn" onclick="filterMenu('dessert')">
+            Dessert
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu List -->
+    <section id="menu" class="menu-section">
+      <div class="container">
+        <h2 class="section-title">Daftar Menu</h2>
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Cari menu..."
+            onkeyup="searchMenu()"
+          />
+          <i class="fas fa-search"></i>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+          <!-- Menu items akan di-generate oleh JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2>Tentang Kami</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              Resto Menu telah melayani pelanggan sejak 2020 dengan menyajikan
+              berbagai hidangan berkualitas. Kami menggunakan bahan-bahan segar
+              dan resep tradisional yang dimodernisasi untuk menciptakan cita
+              rasa yang istimewa.
+            </p>
+            <p>
+              Kepuasan pelanggan adalah prioritas utama kami. Setiap hidangan
+              disiapkan dengan penuh cinta dan perhatian terhadap detail.
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">1000+</span>
+              <span class="stat-label">Pelanggan</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Menu</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">4.8</span>
+              <span class="stat-label">Rating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Kontak Kami</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Jl. Makan Enak No. 123, Jakarta</p>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <p>(021) 1234-5678</p>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <p>info@restomenu.com</p>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <p>Buka Setiap Hari: 10.00 - 22.00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Resto Menu. Hak Cipta Dilindungi.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
