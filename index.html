@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PolBel Resto Site</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Font keren unntuk ikon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigasi Bar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-brand">
+          <h1>Menu Hidangan 🍽️</h1>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home">Awalan</a></li>
+          <li><a href="#menu">Daftar</a></li>
+          <li><a href="#about">Informasi</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Seksi Masuk -->
+    <section id="home" class="hero">
+      <div class="container">
+        <h2>Selamat Datang Pengunjung!</h2>
+        <p>Nikmati Hidangannya Nanti!</p>
+        <button class="btn btn-primary" onclick="scrollToMenu()">
+          Buka Menu
+        </button>
+      </div>
+    </section>
+
+    <!-- Filter Daftar -->
+    <section class="menu-filters">
+      <div class="container">
+        <h2>Jenis Hidangan</h2>
+        <div class="filter-buttons">
+          <button class="filter-btn active" onclick="filterMenu('all')">
+            Semuanya
+          </button>
+          <button class="filter-btn active" onclick="filterMenu('makanan')">
+            Makanan
+          </button>
+          <button class="filter-btn active" onclick="filterMenu('minuman')">
+            Minuman
+          </button>
+          <button class="filter-btn active" onclick="filterMenu('dessert')">
+            Dessert
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Daftar Menu -->
+    <section id="menu" class="menu-section">
+      <div class="container">
+        <h2 class="section-title">Daftar Hidangan</h2>
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Mencari Hidangan..."
+            onkeyup="searchMenu()"
+          />
+          <i class="fas fa-search"></i>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+          <!-- Menu item digenerate oleh Javascript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Tentang Seksi -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2>Informasi</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
+              temporibus suscipit voluptate, saepe quia similique perspiciatis
+              eum, explicabo id dolorem eius hic repudiandae tempore
+              reprehenderit rerum eos, et voluptatum repellendus.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+              labore provident dolorum temporibus accusamus alias molestiae quis
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">20+</span>
+              <span class="stat-label"> Daftar Hidangan</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Website</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">A</span>
+              <span class="stat-label">Penilaian</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- seksi kontak -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Kontak Lanjut</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Jl.Air serkuk, Tanjungpandan</p>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <p>+62 819-9010-1270</p>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <p>hadifirdaus0106@gmail.com</p>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <p>Buka Senin-Jumat : 16.00 - 20.00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footers -->
+    <footer class="footer">
+      <div class="container">
+        <p><i><b>Media Sosial</b></i></p>
+        <div class="social-links">
+          <a href="#"> |<i class="fab fa-whatsapp"></i>| 081990101270 |</a>
+          <a href="https://www.instagram.com/hd.tpi.blur?igsh=d2xtdzd1eWUyMWU5"><i class="fab fa-instagram"></i>| @hd.tpi.blur |</a>
+          <a href="https://facebook.com/profile.php?id=100081470139162"><i class="fab fa-facebook"></i>| CathPelauge |</a>
+          <a href="https://www.youtube.com/@Kazikiiz"><i class="fab fa-youtube"></i>| @Kazikiari|</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
